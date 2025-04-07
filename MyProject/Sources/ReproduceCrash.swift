@@ -12,8 +12,8 @@ import MyPackage
 func reproduceCrash() {
     print("iOS: \(UIDevice.current.systemVersion)")
     WithinPackage.countClasses_enumerateClasses()
-    WithinPackage.countClasses_getClassList()
     WithinProject.countClasses_enumerateClasses()
+    WithinPackage.countClasses_getClassList()
     WithinProject.countClasses_getClassList()
     print("Did not crash")
 }
