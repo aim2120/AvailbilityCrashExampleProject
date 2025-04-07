@@ -7,7 +7,7 @@ import Translation
 
 
 @objc
-public final class MyClass: NSObject, MyPackageProtocol {
+final class MyClass: NSObject, MyPackageProtocol {
     public override init() {
         print("Initialize \(String(describing: Self.self))")
     }
@@ -15,7 +15,7 @@ public final class MyClass: NSObject, MyPackageProtocol {
 
 @objc
 @available(iOS 18, *)
-public final class MyClassiOS18Only: NSObject, MyPackageProtocol {
+final class MyClassiOS18Only: NSObject, MyPackageProtocol {
     @objc
     @available(iOS 18, *)
     public override init() {
