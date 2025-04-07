@@ -46,6 +46,7 @@ enum WithinPackage {
 
 enum WithinProject {
     static func countClasses_enumerateClasses() {
+        print(#function)
         let conformingClasses: [any MyProjectProtocol] = objc_enumerateClasses(conformingTo: MyProjectProtocol.self)
             .lazy
             .compactMap { ($0 as? MyProjectProtocol.Type)?.init() }
@@ -53,6 +54,7 @@ enum WithinProject {
     }
 
     static func countClasses_getClassList() {
+        print(#function)
         let numberOfClasses = Int(objc_getClassList(nil, 0))
 
         guard numberOfClasses > 0 else { return }
